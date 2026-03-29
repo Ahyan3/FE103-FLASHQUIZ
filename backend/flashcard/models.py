@@ -13,6 +13,7 @@ class UserManager(BaseUserManager):
         user = self.model(email=email, username=username)
         user.set_password(password)
         user.save(using=self._db)
+        return user
 
     def create_superuser(self, email, username, password):
         user = self.create_user(email, username, password)
