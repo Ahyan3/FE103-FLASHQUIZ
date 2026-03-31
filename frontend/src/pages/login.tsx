@@ -25,7 +25,7 @@ const Login = () => {
       // Call the API login
       const user = await apiLogin(emailOrUsername, password);
 
-      // Redirect to home/dashboard
+      // Redirect to home/dashboard pages
       navigate("/");
     } catch (err: any) {
       console.error(err);
